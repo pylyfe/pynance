@@ -1,0 +1,19 @@
+Last login: Fri May 11 12:13:20 on ttys000
+Regios-MacBook-Pro:~ regioabundan$ cd Desktop
+Regios-MacBook-Pro:Desktop regioabundan$ python montecarlo.py
+Martingale death rate:  77.0
+Martingale survival rate:  23.0
+objc[8044]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff9cc04b68) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x10cee9cd8). One of the two will be used. Which one is undefined.
+Simple death rate:  0.7
+Simple survival rate:  99.3
+ 
+
+
+
+
+
+
+
+
+
+
