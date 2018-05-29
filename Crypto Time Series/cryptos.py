@@ -127,7 +127,5 @@ plt.show()
 #   plt.ylabel('Price')
 #   plt.show()
 
-# Frequency: Still have no idea what this is 
-
 # print(bitcoin['Close'].resample('A').mean())
 # print(bitcoin['Close'].resample('A').apply(lambda x: x[-1]))
