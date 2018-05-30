@@ -2,14 +2,15 @@
 import pandas_datareader.data as web
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 assets =  ['KO', 'PEP', 'GE', 'ORCL', 'WMT'] 
 
 df = pd.DataFrame()  
 
 for stock in assets:
-    df[stock] = web.DataReader(stock, data_source='yahoo',
-                               start='2015-1-1' , end='2017-1-1')['Adj Close']
+    df[stock] = web.DataReader(stock, data_source='quandl',
+                               start='2015-1-1' , end='2017-1-1')['AdjClose']
 
 # Get Daily Returns
 
@@ -28,9 +29,15 @@ port_variance = np.dot(weights.T, np.dot(cov_matrix_a, weights))
 # Standard Deviation (Volatility)
 port_volatility = np.sqrt(np.dot(weights.T, np.dot(cov_matrix_a, weights)))
 
-percent_var = str(round(port_variance, 4) * 100) + '%'
-percent_vols = str(round(port_volatility, 4) * 100) + '%'
+percent_var = port_variance * 100
+percent_vols = port_volatility * 100
 
-print('Variance of Portfolio is {}, Portfolio Risk is {}'
-      .format(percent_var, percent_vols))
+print('Variance of Portfolio is %.2f, Portfolio Risk is %.2f' % (percent_var, percent_vols))
 
+d_returns.plot(figsize=(16,8))
+
+plt.show()
+
+print(d_returns.describe())
+
+print(d_returns.corr())
