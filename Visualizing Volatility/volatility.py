@@ -16,6 +16,7 @@ for stock in assets:
 asset_returns_daily = df.pct_change()
 asset_volatility_daily = asset_returns_daily.std()
 
-asset_returns_daily.plot.hist(bins=50, figsize=(10,6));
+asset_returns_daily.plot(figsize=(10,6))
+asset_volatility_daily.plot(figsize=(10,6))
 plt.xlabel('Daily Returns')
 plt.show()
