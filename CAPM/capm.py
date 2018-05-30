@@ -1,10 +1,10 @@
 import pandas as pd 
 import statsmodels.api as sm 
 
-de = pd.read_csv('NKE.csv', parse_dates = True, index_col = 'Date')
+nke = pd.read_csv('NKE.csv', parse_dates = True, index_col = 'Date')
 spy = pd.read_csv('^GSPC.csv', parse_dates = True, index_col = 'Date')
 
-df = pd.concat([de['Close'], spy['Close']], axis = 1)
+df = pd.concat([nke['Close'], spy['Close']], axis = 1)
 df.columns = ['NKE', '^GSPC']
 
 print(df.head())
