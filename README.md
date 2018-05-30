@@ -6,4 +6,6 @@ Quantopian Lectures (https://www.quantopian.com/lectures)
 
 Bernard Brenyah on Medium (https://medium.com/@bbrenyah?source=post_header_lockup)
 
+Vitalik Buterin's Website (https://vitalik.ca)
+
 Notes here are only for my own study purposes. 
